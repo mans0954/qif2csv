@@ -14,4 +14,4 @@ print(args)
 
 qif = Qif.parse(args.input, day_first=True)
 df = qif.to_dataframe(data_type=QifDataType.TRANSACTIONS)
-df.to_csv(args.output, index=False)
+df.to_csv(args.output, index=False, columns=['date', 'payee', 'amount', 'line_number'])
