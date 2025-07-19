@@ -15,4 +15,4 @@ qif = Qif.parse(args.input, day_first=True)
 df = qif.to_dataframe(data_type=QifDataType.TRANSACTIONS)
 #df.to_csv(args.output, index=False, columns=['date', 'payee', 'amount', 'line_number'])
 
-df.to_excel(args.output, index=False, sheet_name=os.path.basename(args.output), columns=['date', 'payee', 'amount', 'line_number'])
+df.to_excel(args.output, index=False, sheet_name=os.path.basename(args.output), columns=['date', 'payee', 'amount', 'line_number'], startrow=5)
